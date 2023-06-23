@@ -142,8 +142,9 @@ async function execute() {
   console.log(`Downloaded blob content: "${downloadedContent}"`);
 
 
-  const sas_url = generate_download_signed_url('your-account-name', 'your-container-name', 'your-blob-name', 'your-azure-account-key')
-  
+  const sas_url = generate_download_signed_url(STORAGE_ACCOUNT_NAME, 'demo', blobName, ACCOUNT_ACCESS_KEY)
+  console.log(sas_url);
+
   // await blockBlobClient.delete(aborter);
   // console.log(`Block blob "${blobName}" is deleted`);
   
